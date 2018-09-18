@@ -394,16 +394,7 @@ The full command executed when starting this node
 
 ...and for quitting:
     '$CMD_QUIT'
-
-Do you wish to proceed this configuration? y/n
 "
-
-read proceedDecision
-
-if [ "$proceedDecision" != "y" ] && [ "$proceedDecision" != "Y" ]; then
-    printf "abort\n"
-    exit 1
-fi
 
 if [ ! -z "$INSTALLER_ARCHIVE" ]; then
     printf "Installing CockroachDB...\n"
